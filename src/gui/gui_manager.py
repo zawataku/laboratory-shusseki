@@ -7,7 +7,6 @@ def setup_gui(root, welcome_message, current_time, status_message):
     tk.Label(root, textvariable=current_time, font=("Arial", 16)).pack(pady=10)
     global status_label
     status_label = tk.Label(root, textvariable=status_message, font=("Arial", 16), width=40, height=5)
-    status_label.pack(pady=20)
 
 def update_time(current_time):
     def update():

@@ -37,7 +37,8 @@ def on_card(tag):
     return True
 
 def clear_status_message():
-    status_message.set("")
+    status_message.set("")  # ステータスラベルのテキストを空にする
+    status_label.config(bg=root['bg'])  # 背景色をウィンドウのデフォルトにリセット
 
 def read_card():
     clf = nfc.ContactlessFrontend('usb')
@@ -66,11 +67,10 @@ if __name__ == "__main__":
         textvariable=status_message,  # メッセージを表示
         font=("Arial", 16),
         fg="white",
-        bg="gray",
         width=40,
         height=5,
     )
-    # status_label.pack(pady=20)  # GUI内に配置
+    status_label.pack(pady=20)  # GUI内に配置
 
     gui_manager.update_time(current_time)  # 修正: current_timeのみを渡す
 
