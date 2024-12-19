@@ -8,6 +8,9 @@ dist/
 # PyInstallerのspecファイル
 main.spec
 
+# dataファイル
+*.csv
+
 # その他の一般的な除外対象
 __pycache__/
 *.pyc
